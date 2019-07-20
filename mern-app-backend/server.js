@@ -19,9 +19,9 @@ app.use(express.urlencoded({ extended: false }));
 
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });
-const connecttion = mongoose.connection;
-connecttion.once("open", () => {
-  console.log("MongoDB connection estrabished sucessfully");
+const connection = mongoose.connection;
+connection.once("open", () => {
+  console.log("MongoDB database connection established successfully");
 });
 
 const port = process.env.PORT || 5001;
