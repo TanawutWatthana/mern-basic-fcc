@@ -4,16 +4,16 @@ const Schema = mongoose.Schema;
 
 const exerciseSchema = new Schema(
   {
-    username: {},
-    description: {},
-    duration: {},
-    date: {}
+    username: { type: String, required: true },
+    description: { type: String, required: true },
+    duration: { type: Number, required: true },
+    date: { type: Date, required: true }
   },
   {
     timestamps: true
   }
 );
 
-const Excercise = mongoose.model("Exercise", exerciseSchema);
+const Exercise = mongoose.model("Exercise", exerciseSchema);
 
-module.exports = Excercise;
+module.exports = Exercise;
